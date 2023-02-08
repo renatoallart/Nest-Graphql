@@ -1,0 +1,50 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Pet {
+  id: Int!
+  name: String!
+  type: String
+}
+
+type User {
+  id: Int!
+  name: String!
+  email: String!
+}
+
+type Book {
+  id: Int!
+  title: String!
+  author: String!
+  price: Float!
+}
+
+type Query {
+  pets: [Pet!]!
+  users: [User!]!
+  books: [Book!]!
+}
+
+type Mutation {
+  createPet(createPetInput: CreatePetInput!): Pet!
+  createUser(createUser: CreateUserInput!): User!
+  createBook(createBook: CreateBookInput!): Book!
+}
+
+input CreatePetInput {
+  name: String!
+  type: String
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+}
+
+input CreateBookInput {
+  title: String!
+  author: String!
+  price: Float!
+}
